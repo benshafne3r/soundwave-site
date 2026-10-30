@@ -1,0 +1,48 @@
+:root {
+  --bg: #0a0a0c;
+  --fg: #f4f4f6;
+  --muted: #9a9aa5;
+  --line: #24242b;
+  --accent: #8b5cf6;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; }
+.logo svg { width: 28px; height: 28px; }
+nav .links { display: flex; gap: 24px; font-size: 14px; color: var(--muted); }
+nav .links a { text-decoration: none; }
+nav .links a:hover { color: var(--fg); }
+
+.hero { padding: 14vh 0 12vh; }
+.eyebrow { color: var(--accent); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px; }
+h1 { font-size: clamp(40px, 7vw, 80px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 600; margin: 0; max-width: 14ch; }
+.lede { color: var(--muted); font-size: clamp(17px, 2vw, 20px); max-width: 52ch; margin: 28px 0 40px; }
+.cta { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--fg); color: var(--bg); font-weight: 600; text-decoration: none; transition: transform .15s ease; }
+.cta:hover { transform: translateY(-1px); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); border-top: 1px solid var(--line); }
+.cell { padding: 36px 28px 40px 0; border-bottom: 1px solid var(--line); }
+.cell .n { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.cell h3 { margin: 14px 0 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+.cell p { margin: 0; color: var(--muted); font-size: 15px; }
+
+footer { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; padding: 48px 0; color: var(--muted); font-size: 14px; }
+footer .links { display: flex; gap: 20px; }
+
+.doc { max-width: 720px; padding: 40px 0 80px; }
+.doc h1 { font-size: clamp(32px, 5vw, 48px); max-width: none; }
+.doc .updated { color: var(--muted); margin: 12px 0 40px; }
+.doc h2 { font-size: 20px; margin: 40px 0 8px; letter-spacing: -0.01em; }
+.doc p, .doc li { color: #c9c9d1; }
+
+@media (prefers-reduced-motion: reduce) { .cta { transition: none; } }
